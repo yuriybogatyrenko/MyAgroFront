@@ -1,6 +1,10 @@
+@import "mixins/mixins"
+
 .fri
 	display: inline-block
 	vertical-align: middle
 
-.fri-qube-logo
-	+sprite(qube-logo)
+$ico: icon-money icon-phone icon-people icon-badge icon-present icon-document icon-app-store icon-google-play icon-windows-phone
+@each $key in $ico
+	.#{$key}
+		+sprite(#{$key})

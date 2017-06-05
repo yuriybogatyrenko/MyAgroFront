@@ -1,8 +1,371 @@
+@import "mixins/mixins"
+
 html, body
   margin: 0
   height: 100%
 
 body
-  box-shadow: inset 0 0 500px
   font-family: istock, sans-serif, arial
   font-size: 16px
+  color: #343434
+
+.container
+  max-width: 1240px
+  box-sizing: border-box
+  padding: 0 20px
+  margin-left: auto
+  margin-right: auto
+
+.header
+  background: url(../images/top-screen-1.jpg) no-repeat center top / cover
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+  & > *
+    line-height: normal
+
+.header__top-line
+  padding: 35px 0
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1000
+  +transition()
+
+  &.fixed
+    background: rgba(#fff, 0.9)
+    box-shadow: 0 0 10px #999
+    padding: 15px 0
+
+.header__menu-item
+  display: inline-block
+  vertical-align: middle
+  margin-left: 18px
+
+.header__menu-link
+  text-decoration: none
+  font-size: 17px
+  color: inherit
+
+  &:hover
+    text-decoration: underline
+
+.header__middle
+  padding-top: 200px
+  padding-bottom: 140px
+  margin-top: auto
+  margin-bottom: auto
+
+.header__title
+  font-size: 45px
+  font-weight: bold
+  margin-bottom: 5px
+
+.header__subtitle
+  font-size: 27px
+
+.button
+  border-radius: 3px
+  display: inline-block
+  height: 62px
+  padding: 0 15px
+  line-height: 62px
+  text-decoration: none
+  border: none
+  font-size: 25px
+  font-weight: bold
+  cursor: pointer
+  +transition()
+
+.button-red
+  background-image: linear-gradient(90deg, rgb(205, 63, 63) 0%, rgb(255, 64, 64) 100%)
+  background-image: -moz-linear-gradient(90deg, rgb(205, 63, 63) 0%, rgb(255, 64, 64) 100%)
+  background-image: -webkit-linear-gradient(90deg, rgb(205, 63, 63) 0%, rgb(255, 64, 64) 100%)
+  background-image: -ms-linear-gradient(90deg, rgb(205, 63, 63) 0%, rgb(255, 64, 64) 100%)
+  box-shadow: 0.5px 0.866px 0px 0px rgb(155, 2, 2)
+  color: #fff
+
+  &:hover
+    box-shadow: 0.5px 0.866px 0px 0px rgb(155, 2, 2), inset 0 0 0 1000px rgba(#000, 0.2)
+
+.header__statistic
+  background: rgba(#000, 0.3)
+  color: #fff
+  padding: 30px 0
+
+.block-title
+  font-size: 45px
+  color: #000
+  font-weight: bold
+
+  &.white
+    color: #fff
+
+.section-box
+  padding: 65px 0
+
+.fit-to
+  background-color: #f5f5f5
+  padding-bottom: 95px
+
+.fit-to__item
+  background: #fff
+  box-shadow: 0 0 10px #ccc
+  +transition()
+
+  &:hover
+    transform: scale(1.1)
+    box-shadow: 0 0 20px #ccc
+    z-index: 2
+    position: relative
+
+.fit-to__content
+  padding: 20px 15px
+  font-size: 18px
+  line-height: 1.8
+
+.fit-to__image
+  font-size: 0
+  line-height: 0
+
+.reasons
+  background: url("../images/reasons-bg.jpg") no-repeat center top / cover
+
+.reasons__content
+  padding: 70px 70px 70px 120px
+  box-sizing: border-box
+  background: #fff
+  max-width: 700px
+  margin-right: 0
+  margin-left: auto
+
+.reasons__list
+  counter-reset: list
+
+.reasons__item
+  line-height: 1.8
+  position: relative
+  letter-spacing: -0.7px
+
+  &:before
+    counter-increment: list
+    content: counter(list)
+    position: absolute
+    right: 100%
+    top: 50%
+    font-size: 45px
+    line-height: 100px
+    margin-top: -50px
+    margin-right: 25px
+
+  &:not(:last-child)
+    margin-bottom: 25px
+
+.section-grey
+  background: #f5f5f5
+
+.to-buyers__icon, .to-suppliers__icon
+  margin-bottom: 15px
+
+.to-suppliers
+  padding-top: 80px
+
+.how-it-work
+  background: url(../images/how-it-works-bg.jpg) no-repeat center center / cover
+
+.how-it-work__grid
+  counter-reset: list
+
+  position: relative
+
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    left: 50%
+    width: 2px
+    background: #17cb70
+    height: calc(100% - 100px)
+    top: 50%
+    +transform(translate(-50%, -50%))
+
+  .how-it-work__line
+    position: relative
+    z-index: 2
+
+    &:before
+      counter-increment: list
+      content: counter(list)
+      color: #fff
+      width: 46px
+      height: 46px
+      border-radius: 100%
+      background: #17cb70
+      text-align: center
+      line-height: 50px
+      font-size: 35px
+      font-weight: bold
+      position: absolute
+      left: 50%
+      top: 50%
+      margin-left: -23px
+      margin-top: -23px
+
+.how-it-work__line
+  display: flex
+  justify-content: center
+  align-items: center
+
+.how-it-work__left
+  margin-right: 100px
+  text-align: right
+
+.how-it-work__left, .how-it-work__right
+  width: 300px
+  font-size: 20px
+  line-height: 1.53
+
+.fw-label
+  background: #ffc133
+  border-radius: 3px
+  line-height: 34px
+  color: #fff
+  padding: 0 10px
+  display: inline-block
+  vertical-align: middle
+  font-weight: bold
+  font-size: 22px
+
+.review
+  > *
+    flex-shrink: 0
+    flex-basis: 0
+
+.review__avatar
+  flex-basis: 120px
+  margin-right: 100px
+
+  img
+    border-radius: 100%
+
+.review__content
+  flex-grow: 1
+  line-height: 1.8
+  font-size: 18px
+
+  p:not(:last-child)
+    margin-bottom: 30px
+
+.reviews__carousel
+  padding-left: 150px
+  padding-right: 150px
+  box-sizing: border-box
+
+.want-same
+  padding: 90px 0 75px
+  color: #fff
+  font-size: 23px
+  background: url("../images/want-same-bg.jpg") no-repeat center center / cover
+
+  .block-title
+    font-size: 50px
+
+.partners__carousel
+  padding: 0 80px
+  box-sizing: border-box
+
+.faq__item
+  padding: 0 20px
+
+  &:not(:last-child)
+    margin-bottom: 25px
+
+  &:first-child
+    .faq__item-content
+      display: block
+
+  &.active
+    .faq__item-title
+      border-color: transparent
+
+.faq__item-title
+  display: inline-block
+  border-bottom: 1px dashed #1a1a1a
+  margin-bottom: 10px
+  cursor: pointer
+  font-size: 19px
+
+.faq__item-content
+  display: none
+  line-height: 1.8
+
+.mobile-app
+  padding-top: 60px
+
+.mobile-app__link
+  text-decoration: none
+  display: inline-block
+  +transition()
+  &:hover
+    box-shadow: 0 0 5px #333
+    border-radius: 5px
+
+.bottom-form
+  text-align: center
+  color: #fff
+  background: url(../images/bottom-form-bg.jpg) no-repeat center center / cover
+
+.bottom-form__description
+  font-size: 20px
+  color: #fff
+  font-weight: normal
+
+.bottom-form__form-wrapper
+  vertical-align: middle
+  max-width: 600px
+  display: inline-block
+
+input, textarea
+  display: block
+  width: 100%
+  border: none
+  background: #fff
+  height: 40px
+  box-sizing: border-box
+  padding: 0 15px
+  font-family: inherit
+  font-size: inherit
+
+textarea
+  resize: none
+  height: 120px
+  padding-top: 15px
+  padding-bottom: 15px
+
+.footer
+  padding: 30px 0
+
+.owl-carousel
+  .owl-prev, .owl-next
+    display: block
+    width: 20px
+    height: 20px
+    border-top: 2px solid #ccc
+    border-right: 2px solid #ccc
+    margin-top: -10px
+    +transform(rotate(45deg))
+    position: absolute
+    top: 50%
+    right: 0
+    font-size: 0
+    +transition()
+
+    &:hover
+      border-color: #1a1a1a
+
+  .owl-prev
+    +transform(rotate(-135deg))
+    right: auto
+    left: 0

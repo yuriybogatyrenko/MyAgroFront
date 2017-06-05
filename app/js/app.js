@@ -240,6 +240,36 @@
         return plugin;
     };
 
+    YOURAPPNAME.prototype.headerChange = function () {
+        var $header = $('.header__top-line');
+        headerDetect($(window));
+        $(window).scroll(function (e) {
+            headerDetect($(this));
+        });
+
+        function headerDetect($window) {
+            if($window.scrollTop() > 200) {
+                $header.addClass('fixed');
+            } else {
+                $header.removeClass('fixed');
+            }
+        }
+    };
+
+    YOURAPPNAME.prototype.accordion = function (selector) {
+        var accordion = $(selector);
+        accordion.find('[data-title]').on('click', function (e) {
+            e.preventDefault();
+            var $this = $(this);
+            if($this.parent().hasClass('active')) {
+                $this.next().slideUp(300).removeClass('active');
+            } else {
+                $this.closest('[data-item]').siblings().removeClass('active').find('[data-content]').slideUp(300);
+                $this.next().stop().slideDown(300).parent().addClass('active');
+            }
+        });
+    };
+
     var app = new YOURAPPNAME(document);
 
     app.appLoad('loading', function () {
@@ -256,9 +286,43 @@
     });
 
     app.appLoad('full', function (e) {
-        console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
-        // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
-        // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+
+        app.accordion('[data-accordion]');
+        app.headerChange();
+
+        $('.reviews__carousel').owlCarousel({
+            items: 1,
+            navigation: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    dots: true
+                },
+                768: {
+                    items: 1,
+                    nav: true,
+                    dots: false
+                }
+            }
+        });
+
+        $('.partners__carousel').owlCarousel({
+            navigation: true,
+            autoWidth: true,
+            margin: 30,
+            loop: true,
+            responsive: {
+                0: {
+                    nav: false,
+                    dots: true
+                },
+                768: {
+                    nav: true,
+                    dots: false
+                }
+            }
+        });
     });
 
 })();
