@@ -461,6 +461,11 @@ body {
   color: #343434;
 }
 
+.app-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+}
+
 .container {
   max-width: 1240px;
   box-sizing: border-box;
