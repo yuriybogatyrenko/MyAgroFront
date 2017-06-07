@@ -24,6 +24,9 @@ $fz: 16 18 17 22 24 25 30 38 40 47
 .fw-flex-between
   justify-content: space-between
 
+.fw-flex-wrap
+  flex-wrap: wrap
+
 .fw-grid
   display: flex
   flex-wrap: wrap
@@ -72,6 +75,9 @@ $fz: 16 18 17 22 24 25 30 38 40 47
 
 .lh18
   line-height: 1.8
+  
+.hidden
+  display: none
 
 @media screen and (max-width: 992px)
   .fw-width-1-2\@m
@@ -80,3 +86,19 @@ $fz: 16 18 17 22 24 25 30 38 40 47
 @media screen and (max-width: 767px)
   .fw-width-1-1\@s
     width: 100%
+    
+  .fz22\@s
+    font-size: 22px
+    
+  .fz16\@s
+    font-size: 16px
+    
+  .hidden\@s
+    display: none
+    
+  .visible\@s
+    display: inline-block
+    vertical-align: middle
+    
+  .fw-block\@s
+    display: block
