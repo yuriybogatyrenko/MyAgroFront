@@ -8,6 +8,10 @@ $fz: 16 18 17 22 24 25 30 38 40 47
   .fz#{$key}
     font-size: #{$key}px
 
+.fw-inline-block
+  display: inline-block
+  vertical-align: middle
+
 .fw-flex
   display: flex
 
@@ -68,3 +72,11 @@ $fz: 16 18 17 22 24 25 30 38 40 47
 
 .lh18
   line-height: 1.8
+
+@media screen and (max-width: 992px)
+  .fw-width-1-2\@m
+    width: 50%
+
+@media screen and (max-width: 767px)
+  .fw-width-1-1\@s
+    width: 100%

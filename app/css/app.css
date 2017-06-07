@@ -182,6 +182,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 47px;
 }
 
+.fw-inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .fw-flex {
   display: -ms-flexbox;
   display: flex;
@@ -265,6 +270,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 1.8;
 }
 
+@media screen and (max-width: 992px) {
+  .fw-width-1-2\@m {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fw-width-1-1\@s {
+    width: 100%;
+  }
+}
 .fri {
   display: inline-block;
   vertical-align: middle;
@@ -464,6 +479,7 @@ body {
 .app-wrapper {
   overflow: hidden;
   max-width: 100%;
+  min-width: 320px;
 }
 
 .container {
@@ -804,6 +820,11 @@ body {
   padding-top: 60px;
 }
 
+.mobile-app__image {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
 .mobile-app__link {
   text-decoration: none;
   display: inline-block;
@@ -876,4 +897,15 @@ textarea {
   transform: rotate(-135deg);
   right: auto;
   left: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .reviews__carousel {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .review__avatar {
+    margin-right: 20px;
+  }
 }
