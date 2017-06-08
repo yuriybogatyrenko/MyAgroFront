@@ -1,141 +1,140 @@
 @import "mixins/mixins"
 
 @media screen and (max-width: 992px)
-	.reviews__carousel
-		padding-left: 15px
-		padding-right: 15px
-	
-	.review__avatar
-		margin-right: 20px
+  .reviews__carousel
+    padding-left: 15px
+    padding-right: 15px
+
+  .review__avatar
+    margin-right: 20px
 
 @media screen and (max-width: 767px)
-	.reasons__content
-		padding-left: 15px
-		padding-right: 15px
-		margin-left: -20px
-		margin-right: -20px
-		background-color: rgba(#fff, 0.6)
-	
-	.mobile-app
-		text-align: center
-	
-	.mobile-app__image
-		display: none
-	
-	.block-title
-		font-size: 28px
-	
-	.reasons__item
-		margin-left: 50px
-		
-		&:before
-			font-size: 28px
-	
-	.how-it-work__left, .how-it-work__right
-		font-size: 14px
-	
-	.how-it-work__left
-		margin-right: 50px
-	
-	.how-it-work__grid
-		.how-it-work__line
-			&:before
-				width: 34px
-				height: 34px
-				font-size: 16px
-				margin-left: -17px
-				margin-top: -17px
-				line-height: 36px
-	
-	.fw-label
-		font-size: 14px
-	
-	.reviews__item
-		flex-direction: column
-	
-	.review__avatar
-		max-width: 200px
-		margin-left: auto
-		margin-right: auto
-		margin-bottom: 15px
-	
-	.review__content
-		font-size: 16px
-		
-		p
-			&:not(:last-child)
-				margin-bottom: 10px
-	
-	.want-same
-		font-size: 18px
-		
-		.block-title
-			font-size: 36px
-	
-	.partners__carousel
-		padding: 0
-	
-	.faq__item
-		padding: 0
-	
-	.mobile-app__link
-		box-shadow: 0 0 5px #333
-		border-radius: 5px
-	
-	.header__title
-		font-size: 36px
-		margin-bottom: 15px
-	
-	.header__subtitle
-		font-size: 22px
-	
-	.header__subtitle
-		font-size: 22px
-	
-	.header__statistic-grid
-		& > *
-			margin-left: 15px
-			margin-right: 15px
-			&:not(:last-child)
-				margin-bottom: 25px
-	
-	.header__middle
-		padding-top: 140px
-		padding-bottom: 50px
-	
-	.footer__grid
-		flex-wrap: wrap
-		flex-direction: column
-		margin-bottom: -20px
-		align-items: center
-		& > *
-			margin-bottom: 20px
-   
-			
-	.header__menu-list
-		position: fixed
-		left: -100%
-		width: calc(100% - 20px)
-		top: 0
-		background: #fff
-		height: 100%
-		overflow: auto
-		box-shadow: 0 100px 0 #fff, 0 0 25px #666
-		padding: 0
-		+transition(left 0.5s ease)
-		
-	.header__menu-item
-		display: block
-		padding: 15px 20px
-		border-bottom: 1px solid #ccc
-		margin: 0
-		
-	.header__menu-top
-		display: flex
-		justify-content: space-between
-		align-items: center
-		
-	html.menu-opened
-		overflow: hidden
-		.header__menu-list
-			left: 0
+  .reasons__content
+    padding-left: 15px
+    padding-right: 15px
+    margin-left: -20px
+    margin-right: -20px
+    background-color: rgba(#fff, 0.6)
+
+  .mobile-app
+    text-align: center
+
+  .mobile-app__image
+    display: none
+
+  .block-title
+    font-size: 28px
+
+  .reasons__item
+    margin-left: 50px
+
+    &:before
+      font-size: 28px
+
+  .how-it-work__left, .how-it-work__right
+    font-size: 14px
+
+  .how-it-work__left
+    margin-right: 50px
+
+  .how-it-work__grid
+    .how-it-work__line
+      &:before
+        width: 34px
+        height: 34px
+        font-size: 16px
+        margin-left: -17px
+        margin-top: -17px
+        line-height: 36px
+
+  .fw-label
+    font-size: 14px
+
+  .reviews__item
+    flex-direction: column
+
+  .review__avatar
+    max-width: 200px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 15px
+
+  .review__content
+    font-size: 16px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  .want-same
+    font-size: 18px
+
+    .block-title
+      font-size: 36px
+
+  .partners__carousel
+    padding: 0
+
+  .faq__item
+    padding: 0
+
+  .mobile-app__link
+    box-shadow: 0 0 5px #333
+    border-radius: 5px
+
+  .header__title
+    font-size: 36px
+    margin-bottom: 15px
+
+  .header__subtitle
+    font-size: 22px
+
+  .header__subtitle
+    font-size: 22px
+
+  .header__statistic-grid
+    margin-bottom: -25px
+    & > *
+      margin-left: 15px
+      margin-right: 15px
+      margin-bottom: 25px
+
+  .header__middle
+    padding-top: 140px
+    padding-bottom: 50px
+
+  .footer__grid
+    flex-wrap: wrap
+    flex-direction: column
+    margin-bottom: -20px
+    align-items: center
+    & > *
+      margin-bottom: 20px
+
+  .header__menu-list
+    position: fixed
+    left: -100%
+    width: calc(100% - 20px)
+    top: 0
+    background: #fff
+    height: 100%
+    overflow: auto
+    box-shadow: 0 100px 0 #fff, 0 0 25px #666
+    padding: 0
+    +transition(left 0.5s ease)
+
+  .header__menu-item
+    display: block
+    padding: 15px 20px
+    border-bottom: 1px solid #ccc
+    margin: 0
+
+  .header__menu-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  html.menu-opened
+    overflow: hidden
+    .header__menu-list
+      left: 0
