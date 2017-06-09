@@ -12,8 +12,13 @@
 </head>
 <body>
 <div class="app-wrapper">
+
     <!-- Header block -->
-    {% include "header.twig" %}
+    {% if main_page == 'true' %}
+        {% include "header.twig" %}
+    {% else %}
+        {% include "header-cabinet.twig" %}
+    {% endif %}
     <!-- Header block end -->
 
     <!-- Block content -->
@@ -21,7 +26,10 @@
     <!-- Block content end -->
 
     <!-- Footer block -->
-    {% include "footer.twig" %}
+    {% if main_page == 'true' %}
+        {% include "footer.twig" %}
+        {% set main_page = 'false' %}
+    {% endif %}
     <!-- Footer block end -->
 </div>
 

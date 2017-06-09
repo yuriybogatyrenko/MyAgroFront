@@ -2,6 +2,8 @@
 
 {% block pageTitle %}Главная страница{% endblock %}
 
+{% set main_page = 'true' %}
+
 {% block content %}
     <section class="fit-to section-box">
         <div class="container">
@@ -138,7 +140,7 @@
                 <div class="fz38 fz22@s text-bold mb10">Подайте объявление прямо сейчас</div>
                 <div class="fz22 fz16@s mb20">и получите выгодные предложения в течение нескольких часов</div>
                 <div>
-                    <a href="#" class="button button-red">Подать объявление</a>
+                    <a href="#" class="button button-red js-open-modal" data-open-modal="login">Подать объявление</a>
                 </div>
             </div>
         </div>
@@ -185,7 +187,7 @@
                 <div class="fz38 fz22@s text-bold mb10">Начните продавать прямо сейчас</div>
                 <div class="fz22 fz16@s mb20">зарегистрируйтесь на сайте и откликайтесь на запросы покупателей</div>
                 <div>
-                    <a href="#" class="button button-red">Зарегистрироваться</a>
+                    <a href="#" class="button button-red js-open-modal" data-open-modal="registration">Зарегистрироваться</a>
                 </div>
             </div>
         </div>
@@ -264,7 +266,7 @@
                 Подайте объявление прямо сейчас и попробуйте сами!
             </div>
             <div class="wow fadeInUp">
-                <a href="#" class="button button-red">Подать объявление</a>
+                <a href="#" class="button button-red js-open-modal" data-open-modal="login">Подать объявление</a>
             </div>
         </div>
     </section>
