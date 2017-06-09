@@ -66,7 +66,7 @@ html.modal-opened
 .container
   max-width: 1240px
   box-sizing: border-box
-  padding: 0 20px
+  padding: 0 15px
   margin-left: auto
   margin-right: auto
 
@@ -98,6 +98,9 @@ html.modal-opened
   vertical-align: middle
   margin-left: 18px
   font-size: 17px
+
+.logo
+  +retina-bg('logo.png', 'logo@2x.png', 'autosize')
 
 .header__menu-top
   display: none
@@ -169,7 +172,7 @@ html.modal-opened
 
 .block-title
   font-size: 45px
-  color: #000
+  //color: #000
   font-weight: bold
 
   &.white
@@ -420,8 +423,8 @@ input[type="text"], input[type="email"], input[type="number"], input[type="passw
 textarea
   resize: none
   height: 120px
-  padding-top: 15px
-  padding-bottom: 15px
+  padding-top: 12px
+  padding-bottom: 12px
 
 .footer
   padding: 30px 0
@@ -522,6 +525,9 @@ textarea
     width: 400px
     max-width: 100%
 
+  &.visible
+    +transform(rotateX(0deg))
+
 .modal-close
   position: absolute
   top: 10px
@@ -531,5 +537,34 @@ textarea
 .to-buyers__item, .to-suppliers__item
   width: 100%
 
-input.standard-input
-  border: 1px solid #999
+input, textarea
+  &.standard-input
+    border: 1px solid #999
+
+.switcher-detector
+  position: relative
+  height: 30px
+  border-radius: 40px
+  width: 70px
+  background: #ccc
+  display: inline-block
+  vertical-align: middle
+  +transition()
+
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    top: 2px
+    left: 2px
+    height: 26px
+    width: 26px
+    background: #fff
+    border-radius: 100%
+    +transition()
+
+input
+  &:checked + .switcher-detector
+    background: #17cb70
+    &:after
+      left: calc(100% - 28px)

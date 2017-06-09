@@ -320,7 +320,8 @@
                 e.preventDefault();
                 var $this = $(this);
                 if ($this.parent().hasClass('active')) {
-                    $this.next().slideUp(300).removeClass('active');
+                    $this.parent().removeClass('active')
+                    $this.next().slideUp(300);
                 } else {
                     $this.closest('[data-item]').siblings().removeClass('active').find('[data-content]').slideUp(300);
                     $this.next().stop().slideDown(300).parent().addClass('active');
@@ -400,6 +401,9 @@
 
             app.popups();
             app.formStyler();
+            $('.chosen-select').chosen({
+                width: 100
+            });
         });
 
     })();

@@ -1,0 +1,53 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <div class="cabinet-wrapper">
+        <div class="container">
+            <div class="block-title text-center">Заявка на становление продавцом</div>
+
+            {% include 'components/back-link.twig' %}
+
+            <div class="panel-box panel-padding">
+                <form action="#" class="settings-form">
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Ваше имя:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="text" name="name" class="standard-input" placeholder="Ваше имя">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Ваш E-mail:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="email" name="email" class="standard-input" placeholder="Ваш e-mail">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Ваш телефон:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="text" name="phone" class="standard-input" placeholder="Ваш телефон">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Статус продавца:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <div class="fw-label fw-label-small fw-label-success">Активен</div>
+                        </div>
+                    </div>
+                    <div class="form-line fw-flex">
+                        <button class="button button-red button-medium">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+
+            {% include 'components/back-link.twig' %}
+        </div>
+    </div>
+{% endblock %}

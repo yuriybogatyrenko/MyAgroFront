@@ -1,0 +1,10 @@
+<ul class="pagination">
+    <li class="pagination__item active">
+        <a class="pagination__link" href="#">1</a>
+    </li>
+    {% for i in 1..10 %}
+        <li class="pagination__item">
+            <a class="pagination__link" href="#">{{ i }}</a>
+        </li>
+    {% endfor %}
+</ul>

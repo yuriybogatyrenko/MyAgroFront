@@ -1,0 +1,42 @@
+.chosen-container
+  width: 100% !important
+
+.chosen-container-multi .chosen-choices
+  box-shadow: none
+  background: #fff
+
+.chosen-container-multi .chosen-choices li.search-choice
+  line-height: 34px
+  border: none
+  padding: 0 25px 0 10px
+  background: #17cb70
+  color: #fff
+  font-size: 16px
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close
+  +transform(rotate(45deg))
+  position: absolute
+  top: 50%
+  margin-top: -7px
+  right: 5px
+
+  &, &:hover
+    background: none
+
+  &:after, &:before
+    width: 14px
+    height: 2px
+    background: #fff
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+    display: block
+    content: ''
+
+  &:after
+    height: 14px
+    width: 2px
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"]
+  height: 38px

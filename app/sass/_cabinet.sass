@@ -80,3 +80,97 @@
 .add-request__description
   line-height: 1.8
   font-size: 17px
+
+.back-link
+  margin: 15px 0
+
+.cabinet-faq__item
+  background: #fff
+  //padding: 20px
+  box-shadow: 0 0 15px #ccc
+
+  &:not(:last-child)
+    margin-bottom: 15px
+
+.cabinet-faq__item-title
+  cursor: pointer
+  padding: 20px
+
+.cabinet-faq__item-content
+  line-height: 1.38
+  display: none
+  padding: 0 20px 20px
+
+.back-link__label
+  background: #17cb70
+  border-radius: 3px
+  font-size: 16px
+  color: #fff
+  text-decoration: none
+  display: inline-block
+  line-height: 24px
+  padding: 0 10px
+  +transition()
+  
+  &:hover
+    background: #17cb70*0.8
+
+.article__info
+  color: #888
+
+.article
+  &[data-badge]
+    position: relative
+    &:after
+      position: absolute
+      content: attr(data-badge)
+      border-radius: 20px
+      min-width: 20px
+      height: 20px
+      top: -7px
+      right: -7px
+      text-align: center
+      line-height: 20px
+      background: #f27373
+      font-weight: bold
+      font-size: 16px
+      color: #fff
+      padding: 0 3px
+      box-sizing: border-box
+
+.pagination
+  margin: 15px 0
+  text-align: center
+
+.pagination__item
+  display: inline-block
+  vertical-align: middle
+
+  &.active, &:hover
+    .pagination__link
+      background: #17cb70
+      color: #fff
+
+.pagination__link
+  display: block
+  border-radius: 3px
+  background: #fff
+  box-shadow: 0 0 15px #ccc
+  text-decoration: none
+  padding: 0 5px
+  box-sizing: border-box
+  height: 34px
+  min-width: 34px
+  text-align: center
+  line-height: 34px
+  font-weight: bold
+  +transition()
+
+.field-caption
+  width: 180px
+
+  &:not(.no-padding)
+    padding-top: 12px
+
+.settings-form
+  max-width: 600px

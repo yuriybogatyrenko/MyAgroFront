@@ -1,0 +1,31 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <div class="cabinet-wrapper">
+        <div class="container">
+            <div class="block-title text-center">Мои запросы</div>
+
+            {% include 'components/back-link.twig' %}
+
+            <div class="fw-grid fw-grid-15">
+                {% for i in 1..10 %}
+                    <div class="fw-width-1-2 fw-flex">
+                        <a href="#" class="article reset-link panel-box panel-padding panel-hover" data-badge="10">
+                            <div class="article__title fz24 mb20">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, tenetur.
+                            </div>
+                            <div class="article__info fz14">
+                                <div class="mb5">Категория: Отсевные</div>
+                                <div>Город: Отсевные</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% include 'components/pagination.twig' %}
+
+            {% include 'components/back-link.twig' %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <div class="cabinet-wrapper">
+        <div class="container">
+            <div class="block-title text-center">Личная информация</div>
+
+            {% include 'components/back-link.twig' %}
+
+            <div class="panel-box panel-padding">
+                <form action="#" enctype="multipart/form-data">
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Название предприятия:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="text" name="name" class="standard-input"
+                                   placeholder="Например: ТОО &quot;Агро Трейд&quot;">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Юридический адрес:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="email" name="email" class="standard-input" placeholder="Ваш e-mail">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Лого:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="text" name="phone" class="standard-input" placeholder="Ваш телефон">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Описание предприятия:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <textarea class="standard-input" name="description" placeholder="Описание предприятия"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            E-mail предприятия:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="text" class="standard-input" placeholder="E-mail предприятия">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Контактный телефон
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="text" class="standard-input" placeholder="Телефон предприятия">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Подписка на категории:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <select name="supplier[categories][]" class="chosen-select" multiple>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Подписка на города:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <select name="supplier[cities][]" class="chosen-select" multiple>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Наличие доставки
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <label>
+                                <input type="checkbox" class="hidden" name="supplier[delivery]" checked data-no-style>
+                                <span class="switcher-detector"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line fw-flex">
+                        <button class="button button-red button-medium">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+
+            {% include 'components/back-link.twig' %}
+        </div>
+    </div>
+{% endblock %}

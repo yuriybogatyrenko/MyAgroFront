@@ -107,10 +107,10 @@ gulp.task('compass', function () {
             image: 'app/images',
             source: true
         }))
-        .pipe(prefix({
+        /*.pipe(prefix({
             browsers: ['last 2 versions'],
             cascade: false
-        }))
+        }))*/
         .pipe(gulp.dest(sources.css.dist))
         .pipe(browserSync.reload({stream: true}));
 });
