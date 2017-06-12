@@ -341,6 +341,18 @@
             });
         };
 
+        YOURAPPNAME.prototype.fileInput = function () {
+            var input = $('[data-file-container] input[type="file"]');
+            input.on('change', function () {
+                var wrapper = $(this).parent('[data-file-container]');
+                var str = $(this).val();
+
+                var file = str.split(/(\\|\/)/g).pop();
+
+                wrapper.find('[data-file-name]').text(file);
+            });
+        };
+
         var app = new YOURAPPNAME(document);
 
         app.appLoad('loading', function () {
@@ -404,6 +416,7 @@
             $('.chosen-select').chosen({
                 width: 100
             });
+            app.fileInput();
         });
 
     })();

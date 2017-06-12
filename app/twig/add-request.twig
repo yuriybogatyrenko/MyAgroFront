@@ -1,0 +1,87 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <div class="cabinet-wrapper">
+        <div class="container">
+            <div class="block-title text-center">Подать новый запрос</div>
+
+            {% include 'components/back-link.twig' %}
+
+            <div class="panel-box panel-padding">
+                <form action="#" enctype="multipart/form-data">
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Название запроса:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <input type="text" name="name" class="standard-input"
+                                   placeholder="Например: Куплю посевочный материал | куплю Б/У навесное оборудование для уборки">
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Категория запроса:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <select name="supplier[categories][]" data-placeholder="Выберите категорию" class="chosen-select">
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Регион доставки:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <select name="supplier[cities][]" data-placeholder="Выберите город доставки" class="chosen-select">
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                                <option value="">Lorem ipsum.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex">
+                        <div class="field-caption">
+                            Дополнительная информация о регионе доставки:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <textarea class="standard-input" name="location_info"
+                                      placeholder="Описание предприятия"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Подробное описание запроса:
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <textarea class="standard-input" name="location_info"
+                                      placeholder="Описание предприятия"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-line mb25 fw-flex fw-flex-middle">
+                        <div class="field-caption no-padding">
+                            Показывать мои контакты продавцам
+                        </div>
+                        <div class="field-input fw-flex-grow">
+                            <label>
+                                <input type="checkbox" class="hidden" name="supplier[delivery]" data-no-style>
+                                <span class="switcher-detector"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line fw-flex">
+                        <button class="button button-red button-medium">Добавить запрос</button>
+                    </div>
+                </form>
+            </div>
+
+            {% include 'components/back-link.twig' %}
+        </div>
+    </div>
+{% endblock %}

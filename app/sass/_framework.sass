@@ -1,6 +1,6 @@
 @import "mixins/mixins"
 
-$framework: mb5 mb10 mb15 mb20 mb25 mb30 mb35 mb40 mb45 mb50 mr20 mr50
+$framework: mb5 mb10 mb15 mb20 mb25 mb30 mb35 mb40 mb45 mb50 mr15 mr20 mr50
 +generate-framework($framework)
 
 $fz: 14 16 18 17 22 24 25 30 38 40 47
@@ -103,6 +103,13 @@ label
 .reset-link
   color: inherit
   text-decoration: inherit
+
+.link-green
+  color: #17cb70
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
 
 .fw-label
   display: inline-block

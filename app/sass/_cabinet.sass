@@ -167,10 +167,44 @@
   +transition()
 
 .field-caption
-  width: 180px
+  //width: 220px
+  flex-shrink: 0
+  flex-basis: 220px
 
   &:not(.no-padding)
     padding-top: 12px
 
+.field-input
+  min-width: 0
+
 .settings-form
   max-width: 600px
+
+.input-file-holder__text
+  border: 1px solid #999
+  line-height: 38px
+  padding: 0 15px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  background: #fff
+  flex: 1
+
+.request__answers-panel
+  margin: 15px 0
+
+.request__answers-avatar
+  width: 100px
+  font-size: 0
+  line-height: 0
+
+.request__answers-time
+  margin-top: auto
+  margin-bottom: auto
+  padding-top: 10px
+  padding-bottom: 10px
+  color: #888
+
+.request__answers-company-info
+  display: flex
+  flex-direction: column

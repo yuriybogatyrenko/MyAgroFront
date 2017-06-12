@@ -3,7 +3,7 @@
 {% block content %}
     <div class="cabinet-wrapper">
         <div class="container">
-            <div class="block-title text-center">Личная информация</div>
+            <div class="block-title text-center">Заявка на становление продавцом</div>
 
             {% include 'components/back-link.twig' %}
 
@@ -23,7 +23,7 @@
                             Юридический адрес:
                         </div>
                         <div class="field-input fw-flex-grow">
-                            <input type="email" name="email" class="standard-input" placeholder="Ваш e-mail">
+                            <input type="text" name="supplier[location]" class="standard-input" placeholder="Ваш юридический адрес">
                         </div>
                     </div>
                     <div class="form-line mb25 fw-flex">
@@ -31,7 +31,13 @@
                             Лого:
                         </div>
                         <div class="field-input fw-flex-grow">
-                            <input type="text" name="phone" class="standard-input" placeholder="Ваш телефон">
+                            <div>
+                                <label class="input-file-holder fw-flex" data-file-container>
+                                    <span class="input-file-holder__text fw-flex-grow mr15" data-file-name></span>
+                                    <span class="input-file-holder__button button button-small button-green">Выбрать файл</span>
+                                    <input type="file" class="hidden" data-file-input name="supplier[logo]">
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="form-line mb25 fw-flex">
@@ -39,7 +45,8 @@
                             Описание предприятия:
                         </div>
                         <div class="field-input fw-flex-grow">
-                            <textarea class="standard-input" name="description" placeholder="Описание предприятия"></textarea>
+                            <textarea class="standard-input" name="description"
+                                      placeholder="Описание предприятия"></textarea>
                         </div>
                     </div>
                     <div class="form-line mb25 fw-flex fw-flex-middle">
