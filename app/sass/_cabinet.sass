@@ -4,14 +4,17 @@
   padding: 20px 0
   background: #fff
   box-shadow: 0 0 15px #ccc
-  position: relative
   z-index: 2
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
 
 .cabinet-wrapper
   background: url("../images/cabinet-bg.jpg") no-repeat center center / cover
   background-attachment: fixed
   flex-grow: 1
-  padding: 70px 0
+  padding: 120px 0 70px
 
 .cabinet-grid
   & > *
@@ -117,8 +120,11 @@
 
 .article__info
   color: #888
+  margin-top: auto
 
 .article
+  display: flex
+  flex-direction: column
   &[data-badge]
     position: relative
     &:after
@@ -139,12 +145,13 @@
       box-sizing: border-box
 
 .pagination
-  margin: 15px 0
+  margin: 15px 0 10px
   text-align: center
 
 .pagination__item
   display: inline-block
   vertical-align: middle
+  margin-bottom: 5px
 
   &.active, &:hover
     .pagination__link
@@ -194,7 +201,8 @@
   margin: 15px 0
 
 .request__answers-avatar
-  width: 100px
+  flex-basis: 100px
+  flex-shrink: 0
   font-size: 0
   line-height: 0
 
